@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Chess</title>
+    <style>
+      :root {
+        --black: rgb(75, 39, 39);
+        --white: gray;
+      }
+      body {
+        background-color: #020617;
+      }
+      .container {
+        margin: 0 auto;
+        width: 640px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        background-color: rgb(65, 55, 56);
+        justify-content: center;
+      }
+      .square {
+        height: 80px;
+        width: 80px;
+      }
+      .left {
+        height: 640px;
+        width: 40px;
+        background-color: rgb(65, 55, 56);
+      }
+      .top,
+      .bottom {
+        background-color: rgb(65, 55, 56);
+        padding: 5px 0;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        color: #fff;
+        text-align: center;
+        align-self: center;
+        grid-column: 1 / -1;
+      }
+      .first:nth-child(odd) {
+        background-color: var(--black);
+      }
+      .first:nth-child(even) {
+        background-color: var(--white);
+      }
+      .second:nth-child(odd) {
+        background-color: var(--white);
+      }
+      .second:nth-child(even) {
+        background-color: var(--black);
+      }
+      .white {
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #dadada;
+        font-weight: 500;
+      }
+      .black {
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-weight: 500;
+      }
+      @media screen and (max-width: 1400px) {
+        .container {
+          width: 480px;
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+        }
+        .square {
+          height: 60px;
+          width: 60px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .container {
+          width: 320px;
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+        }
+        .square {
+          height: 40px;
+          width: 40px;
+        }
+        .black,
+        .white {
+          font-size: 2rem;
+        }
+      }
+      h1,
+      h3,
+      h5 {
+        color: #fff;
+        text-align: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chessboard</h1>
+    <div class="container">
+      <div class="top">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+      </div>
+      <div class="square first black">&#9820;</div>
+      <div class="square first black">&#9822;</div>
+      <div class="square first black">&#9821;</div>
+      <div class="square first black">&#9819;</div>
+      <div class="square first black">&#9818;</div>
+      <div class="square first black">&#9821;</div>
+      <div class="square first black">&#9822;</div>
+      <div class="square first black">&#9820;</div>
+
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square second black">&#9823;</div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+      <div class="square first"></div>
+
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square second"></div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+      <div class="square first white">&#9823;</div>
+
+      <div class="square second white">&#9820;</div>
+      <div class="square second white">&#9822;</div>
+      <div class="square second white">&#9821;</div>
+      <div class="square second white">&#9819;</div>
+      <div class="square second white">&#9818;</div>
+      <div class="square second white">&#9821;</div>
+      <div class="square second white">&#9822;</div>
+      <div class="square second white">&#9820;</div>
+      <div class="top">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+      </div>
+    </div>
+    <h5>CSS Grid</h5>
+  </body>
+</html>

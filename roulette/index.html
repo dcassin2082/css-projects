@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Modern+Antiqua&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        --yellow: rgb(228, 228, 118);
+      }
+      body {
+        background-color: green;
+        color: var(--yellow);
+        font-family: "Modern Antiqua", serif;
+        font-weight: 600;
+      }
+      h2 {
+        color: #fff;
+        text-align: center;
+      }
+      .container {
+        height: 400px;
+        margin: 30px auto;
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+      }
+      .number {
+        border: solid 1px #fff;
+        text-align: center;
+        align-content: center;
+      }
+
+      .number span {
+        border: solid 1px #fff;
+        border-radius: 50%;
+        padding: 1.5rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .column {
+        padding: 0 30px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 1.5rem;
+      }
+      .black {
+        background-color: #000;
+        border: solid 1px #000 !important;
+      }
+      .red {
+        background-color: #ff0000;
+        border: solid 1px #ff0000 !important;
+      }
+      .first-12 {
+        grid-column: 2 / span 4;
+        padding: 1rem 0;
+        font-size: 1.8rem;
+      }
+      .second-12 {
+        grid-column: 6 / span 4;
+        font-size: 1.8rem;
+      }
+      .third-12 {
+        grid-column: 10 / span 4;
+        font-size: 1.8rem;
+      }
+      .first-half {
+        grid-column: 2 / span 2;
+        font-size: 1.8rem;
+        padding: 1rem;
+      }
+      .even {
+        grid-column: 4 / span 2;
+        font-size: 1.8rem;
+      }
+      .red-bet {
+        grid-column: 6 / span 2;
+        font-size: 1.8rem;
+      }
+      .black-bet {
+        grid-column: 8 / span 2;
+        font-size: 1.8rem;
+      }
+      .odd {
+        grid-column: 10 / span 2;
+        font-size: 1.8rem;
+      }
+      .second-half {
+        grid-column: 12 / span 2;
+        font-size: 1.8rem;
+        padding: 1rem;
+      }
+      .fa-red {
+        color: red;
+        font-size: 2.5rem;
+      }
+      .fa-black {
+        color: black;
+        font-size: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Roulette (CSS Grid)</h2>
+    <div class="container">
+      <div class="number column" style="border-top: none; text-align: left">
+        00
+      </div>
+      <div class="number">
+        <span class="red single">3</span>
+      </div>
+      <div class="number">
+        <span class="black">6</span>
+      </div>
+      <div class="number">
+        <span class="red">9</span>
+      </div>
+      <div class="number">
+        <span class="red">12</span>
+      </div>
+      <div class="number">
+        <span class="black">15</span>
+      </div>
+      <div class="number">
+        <span class="red">18</span>
+      </div>
+      <div class="number">
+        <span class="red">21</span>
+      </div>
+      <div class="number">
+        <span class="black">24</span>
+      </div>
+      <div class="number">
+        <span class="red">27</span>
+      </div>
+      <div class="number">
+        <span class="red">30</span>
+      </div>
+      <div class="number">
+        <span class="black">33</span>
+      </div>
+      <div class="number">
+        <span class="red">36</span>
+      </div>
+      <div class="number">
+        <p class="column">2 to 1</p>
+      </div>
+      <div class="number" style="border-top: none; border-bottom: none">
+        <p class="no-border"></p>
+        <hr />
+      </div>
+      <div class="number">
+        <span class="black">2</span>
+      </div>
+      <div class="number">
+        <span class="red">5</span>
+      </div>
+      <div class="number">
+        <span class="black">8</span>
+      </div>
+      <div class="number">
+        <span class="black">11</span>
+      </div>
+      <div class="number">
+        <span class="red">14</span>
+      </div>
+      <div class="number">
+        <span class="black">17</span>
+      </div>
+      <div class="number">
+        <span class="black">20</span>
+      </div>
+      <div class="number">
+        <span class="red">23</span>
+      </div>
+      <div class="number">
+        <span class="black">26</span>
+      </div>
+      <div class="number">
+        <span class="black">29</span>
+      </div>
+      <div class="number">
+        <span class="red">32</span>
+      </div>
+      <div class="number">
+        <span class="black">35</span>
+      </div>
+      <div class="number">
+        <p class="column">2 to 1</p>
+      </div>
+      <div class="number column" style="border-bottom: none; text-align: right">
+        0
+      </div>
+      <div class="number">
+        <span class="red">1</span>
+      </div>
+      <div class="number">
+        <span class="black">4</span>
+      </div>
+      <div class="number">
+        <span class="red">7</span>
+      </div>
+      <div class="number">
+        <span class="black">10</span>
+      </div>
+      <div class="number">
+        <span class="black">13</span>
+      </div>
+      <div class="number">
+        <span class="red">16</span>
+      </div>
+      <div class="number">
+        <span class="red">19</span>
+      </div>
+      <div class="number">
+        <span class="black">22</span>
+      </div>
+      <div class="number">
+        <span class="red">25</span>
+      </div>
+      <div class="number">
+        <span class="black">28</span>
+      </div>
+      <div class="number">
+        <span class="black">31</span>
+      </div>
+      <div class="number">
+        <span class="red">34</span>
+      </div>
+      <div class="number">
+        <p class="column">2 to 1</p>
+      </div>
+      <div class="number first-12">1st 12</div>
+      <div class="number second-12">2nd 12</div>
+      <div class="number third-12">3rd 12</div>
+      <div class="number first-half">1 to 18</div>
+      <div class="number even">Even</div>
+      <div class="number red-bet">
+        <i class="fa-solid fa-diamond fa-red"></i>
+      </div>
+      <div class="number black-bet">
+        <i class="fa-solid fa-diamond fa-black"></i>
+      </div>
+      <div class="number odd">Odd</div>
+      <div class="number second-half">19 to 36</div>
+    </div>
+  </body>
+</html>
